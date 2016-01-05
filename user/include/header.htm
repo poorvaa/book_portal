@@ -1,0 +1,26 @@
+<html><head></head><body><div class="header">  
+               
+               <Font class="heading">Online Book Store</font>
+               <font class="user">welcome <?php echo $username ?></font>
+               
+            <br><br>   
+            <div style="clear: both;float: right;">   
+            <form method="get" action="include/book_search.php">
+            <label>Search</label><input type="text" name="search_book" placeholder="enter book name...">
+            <input type="hidden" name="username" value="<?php echo $username ?>" >
+            <input type="submit" value="search">
+            </form>
+            </div>
+               
+            <div id="menu">
+            <ul>
+            <li><a href="../homepage.php">Home</a></li>
+            <li><a href="../about.php">About</a></li>
+            <li><a href="../user/user1.php?submit&username=<?php echo$username  ?>">Account</a></li>
+            <li><a href="../logout.php">Logout</a></li>
+            </ul>
+            
+            
+            </div>
+            </div>
+        </body></html>

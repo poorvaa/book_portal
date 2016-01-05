@@ -1,0 +1,90 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+
+<link rel="stylesheet" href="slider2.css">
+<script src="//assets.codepen.io/assets/libs/modernizr-0e41cf622f0788eca25945c37bdc5b15.js"></script>
+
+</head>
+
+<body>
+
+  <section class="demo">
+  <button class="next">Next</button>
+  <button class="prev">Previous</button>
+  <div class="container">
+    <div style="display: inline-block;">
+      <img src="http://placeimg.com/400/200/people"/>
+    </div>
+    <div>
+     <img src="http://placeimg.com/400/200/any"/>
+    </div>
+    <div>
+      <img src="http://placeimg.com/400/200/nature"/>
+    </div>
+    <div>
+      <img src="http://placeimg.com/400/200/architecture"/>
+    </div>
+    <div>
+      <img src="http://placeimg.com/400/200/animals"/>
+    </div>
+    <div>
+      <img src="http://placeimg.com/400/200/people"/>
+    </div>
+    <div>
+      <img src="http://placeimg.com/400/200/tech"/>
+    </div>
+  </div>
+</section>
+
+<div class="explanation">
+</div>
+
+  <script src='//assets.codepen.io/assets/libs/fullpage/jquery-c152c51c4dda93382a3ae51e8a5ea45d.js'></script>
+
+  <script src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
+
+  <script>
+var currentIndex = 0,
+  items = $('.container div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.container div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+var autoSlide = setInterval(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+}, 3000);
+
+$('.next').click(function() {
+  clearInterval(autoSlide);
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('.prev').click(function() {
+  clearInterval(autoSlide);
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
+  </script>
+
+</body>
+
+</html>

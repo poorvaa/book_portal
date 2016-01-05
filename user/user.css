@@ -1,0 +1,49 @@
+#commentbox1 {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #2B547E;
+    border-radius: 10px;
+    overflow: auto;
+    position: absolute;
+    margin-left: 220px;
+/*    clear: both;*/
+    float: left;
+    margin-top: 50px;
+}
+#commentbox2{
+    width: 600px;
+    height: 300px;
+    border: 1px solid #2B547E;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 900px;
+     margin-top: 50px;
+    overflow: auto;
+}
+div#commenttext {
+    background: #2B547E;
+    padding: 15px;
+    color: white;
+    border-radius: 0px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+}
+#mainspace{
+    width: 1000px;
+/*    background:wheat;*/
+    position: relative;
+    margin-top: 2px;
+    height: 400px;
+}
+#commentbox3 {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #2B547E;
+    border-radius: 10px;
+    overflow: auto;
+    position: absolute;
+    margin-left: 575px;
+    float: left;
+    margin-top: 50px;
+}
